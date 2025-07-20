@@ -1,5 +1,8 @@
 package com.markethub.platform.marketplace.service;
 
-public class shopService {
+import java.util.List;
+import com.markethub.platform.marketplace.entity.Shop;
 
+public interface ShopService {
+    List<Shop> getShops();
 }
