@@ -31,7 +31,7 @@ public class UserCart {
 
 	@Column(name = "quantity", nullable = false)
 	@JsonProperty("quantity")
-	private Integer quantity = 1;
+	private Integer quantity;
 
 	@Column(name = "created_at")
 	@JsonProperty("createdAt")

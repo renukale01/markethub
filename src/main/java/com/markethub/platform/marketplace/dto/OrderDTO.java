@@ -24,9 +24,9 @@ public class OrderDTO {
 	private BigDecimal deliveryCharges;
 	private BigDecimal discountAmount;
 	private BigDecimal finalAmount;
-	private String paymentMethod; // COD, ONLINE, UPI
-	private String paymentStatus; // PENDING, PAID, FAILED
-	private String orderStatus; // PENDING, CONFIRMED, PREPARING, READY, DELIVERED, CANCELLED
+	private String paymentMethod; 
+	private String paymentStatus;
+	private String orderStatus;
 	private String deliveryAddress;
 	private Timestamp estimatedDeliveryTime;
 	private Timestamp confirmedAt;

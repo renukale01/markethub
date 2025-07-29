@@ -42,7 +42,7 @@ public class ProductServiceImpl implements ProductService {
 				.rating(productDto.getRating() != null ? productDto.getRating() : BigDecimal.ZERO)
 				.totalReviews(productDto.getTotalReviews() != null ? productDto.getTotalReviews() : 0)
 				.totalSales(productDto.getTotalSales() != null ? productDto.getTotalSales() : 0)
-				.status(productDto.getStatus()).productType(productDto.getProductType())
+				.status(productDto.getStatus()).categoryName(productDto.getCategoryName())
 				.isFeatured(productDto.getIsFeatured()).capacity(productDto.getCapacity())
 				.createdAt(productDto.getCreatedAt() != null ? productDto.getCreatedAt() : LocalDateTime.now())
 				.updatedAt(productDto.getUpdatedAt() != null ? productDto.getUpdatedAt() : LocalDateTime.now()).build();
@@ -111,8 +111,8 @@ public class ProductServiceImpl implements ProductService {
 	        if (productDto.getStatus() != null) {
 	            existingProduct.setStatus(productDto.getStatus());
 	        }
-	        if (productDto.getProductType() != null) {
-	            existingProduct.setProductType(productDto.getProductType());
+	        if (productDto.getCategoryName() != null) {
+	            existingProduct.setCategoryName(null);
 	        }
 	        if (productDto.getIsFeatured() != null) {
 	            existingProduct.setIsFeatured(productDto.getIsFeatured());

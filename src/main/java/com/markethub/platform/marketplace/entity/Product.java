@@ -68,7 +68,7 @@ public class Product {
 	@JsonProperty("stockQuantity")
 	private Integer stockQuantity;
 
-	@Column(name = "weight", precision = 8, scale = 2)
+	@Column(name = "weight")
 	@JsonProperty("weight")
 	private BigDecimal weight;
 
@@ -76,7 +76,7 @@ public class Product {
 	@JsonProperty("dimensions")
 	private String dimensions;
 
-	@Column(name = "rating", precision = 3, scale = 2)
+	@Column(name = "rating")
 	@JsonProperty("rating")
 	private BigDecimal rating ;
 
@@ -93,9 +93,9 @@ public class Product {
 	@JsonProperty("status")
 	private ProductStatus status;
 
-	@Column(name = "product_type")
-	@JsonProperty("productType")
-	private String productType;
+	@Column(name = "category_name")
+	@JsonProperty("categoryName")
+	private String categoryName;
 
 	@Column(name = "is_featured")
 	@JsonProperty("isFeatured")

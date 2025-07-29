@@ -46,10 +46,6 @@ public class Category {
 	@JsonProperty("isActive")
 	private Boolean isActive = true;
 
-	@Column(name = "sort_order")
-	@JsonProperty("sortOrder")
-	private Integer sortOrder = 0;
-
 	@Column(name = "created_at")
 	@JsonProperty("createdAt")
 	private LocalDateTime createdAt;

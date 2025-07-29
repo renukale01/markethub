@@ -34,7 +34,6 @@ public class ProductDTO {
 	private Integer totalReviews;
 	private Integer totalSales;
 	private ProductStatus status;
-	private String productType;
 	private Boolean isFeatured;
 	private String capacity;
 	private LocalDateTime createdAt;

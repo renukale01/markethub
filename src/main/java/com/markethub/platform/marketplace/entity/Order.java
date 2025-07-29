@@ -1,7 +1,7 @@
 package com.markethub.platform.marketplace.entity;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -79,19 +79,19 @@ public class Order {
 
 	@Column(name = "estimated_delivery_time")
 	@JsonProperty("estimatedDeliveryTime")
-	private Timestamp estimatedDeliveryTime;
+	private LocalDateTime estimatedDeliveryTime;
 
 	@Column(name = "confirmed_at")
 	@JsonProperty("confirmedAt")
-	private Timestamp confirmedAt;
+	private LocalDateTime confirmedAt;
 
 	@Column(name = "delivered_at")
 	@JsonProperty("deliveredAt")
-	private Timestamp deliveredAt;
+	private LocalDateTime deliveredAt;
 
 	@Column(name = "cancelled_at")
 	@JsonProperty("cancelledAt")
-	private Timestamp cancelledAt;
+	private LocalDateTime cancelledAt;
 
 	@Column(name = "cancellation_reason", columnDefinition = "TEXT")
 	@JsonProperty("cancellationReason")
@@ -99,11 +99,11 @@ public class Order {
 
 	@Column(name = "created_at", nullable = false, updatable = false)
 	@JsonProperty("createdAt")
-	private Timestamp createdAt;
+	private LocalDateTime createdAt;
 
 	@Column(name = "updated_at")
 	@JsonProperty("updatedAt")
-	private Timestamp updatedAt;
+	private LocalDateTime updatedAt;
 
 	@OneToMany(mappedBy = "orderId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonProperty("orderItems")

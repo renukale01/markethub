@@ -21,7 +21,6 @@ public class CategoryDTO {
 	private String iconUrl;
 	private Long parentId;
 	private Boolean isActive;
-	private Integer sortOrder;
 	private LocalDateTime createdAt;
 	private String parentCategoryName;
 	private List<CategoryDTO> subCategories;
