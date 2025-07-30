@@ -1,7 +1,8 @@
 package com.markethub.platform.marketplace.dto;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderItemDTO {
-	
+
 	private Long id;
 	private Long orderId;
 	private Long productId;
@@ -23,5 +24,5 @@ public class OrderItemDTO {
 	private BigDecimal totalPrice;
 	private String productName;
 	private String productImageUrl;
-	private Timestamp createdAt;
+	private LocalDateTime createdAt;
 }
