@@ -20,8 +20,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "orders")
 public class Order {
 
@@ -108,5 +112,6 @@ public class Order {
 	@OneToMany(mappedBy = "orderId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonProperty("orderItems")
 	private List<OrderItem> orderItems;
+
 
 }
