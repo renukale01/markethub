@@ -1,7 +1,7 @@
 package com.markethub.platform.marketplace.entity;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,7 +11,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "order_items")
 public class OrderItem {
@@ -49,8 +53,8 @@ public class OrderItem {
 	@JsonProperty("productImageUrl")
 	private String productImageUrl;
 
-	@Column(name = "created_at", nullable = false, updatable = false)
+	@Column(name = "created_at")
 	@JsonProperty("createdAt")
-	private Timestamp createdAt;
+	private LocalDateTime createdAt;
 
 }
