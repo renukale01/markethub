@@ -41,7 +41,5 @@ public class ProductDTO {
 	private String categoryName;
 	private String shopName;
 	private List<ProductPhotoDTO> productPhotos;
-	private Boolean isAddedToCart;
-	private Boolean isAddedToWishlist;
-
+	
 }
