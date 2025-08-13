@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.markethub.platform.marketplace.entity.Shop;
@@ -49,4 +50,9 @@ public class shopController {
     public void deleteShop(@PathVariable int id) {
         shopservice.deleteShopById(id);
     }
+	
+	@PutMapping("/{shopId}/approval")
+	public Shop approveShop(@PathVariable Long shopId, @RequestParam boolean isApproved) {
+	    return shopservice.updateApprovalStatus(shopId, isApproved);
+	}
 }

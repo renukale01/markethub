@@ -72,4 +72,12 @@ public class shopServiceImpl implements shopService {
 	public Shop updateShopById(int id) {
 		return null;
 	}
+	
+	@Override
+	public Shop updateApprovalStatus(Long shopId,boolean isApproved) {
+		Shop shop=shopRepository.findById(shopId)
+				.orElseThrow(() -> new RuntimeException("Shop not found with ID: " + shopId));
+	    shop.setIsApproved(isApproved);
+	    return shopRepository.save(shop);
+	}
 }

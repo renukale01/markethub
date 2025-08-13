@@ -17,4 +17,6 @@ public interface shopService {
 
 	Shop updateShopById(Shop shop);
 
+	Shop updateApprovalStatus(Long shopId, boolean isApproved) ;
+		
 }

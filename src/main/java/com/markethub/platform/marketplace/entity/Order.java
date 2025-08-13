@@ -25,9 +25,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Data
+@Entity
 @Getter
 @Setter
-@Entity
 @Table(name = "orders")
 public class Order {
 
@@ -114,5 +114,6 @@ public class Order {
 	@OneToMany(mappedBy = "orderId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonProperty("orderItems")
 	private List<OrderItem> orderItems;
+
 
 }
