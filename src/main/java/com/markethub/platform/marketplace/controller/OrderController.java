@@ -29,7 +29,7 @@ public class OrderController {
 		 return Orderservice.updateOrderStatus(orderId,status);
 	 }
 	 
-	 @GetMapping("/buyer/{buyerId}")
+	 @GetMapping("/buyer-order/{buyerId}")
 	 public List<Order> getOrderBuyerId(@PathVariable Long buyerId){
 		 return Orderservice.getOrderBuyerId(buyerId);
 	 }
