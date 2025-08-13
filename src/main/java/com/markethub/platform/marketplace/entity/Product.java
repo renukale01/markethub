@@ -127,9 +127,5 @@ public class Product {
 	@OrderBy("displayOrder ASC")
 	private List<ProductPhoto> productPhotos;
 
-	@JsonProperty("isAddedToCart")
-	private Boolean isAddedToCart;
 
-	@JsonProperty("isAddedToWishlist")
-	private Boolean isAddedToWishlist;
 }

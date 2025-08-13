@@ -20,9 +20,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+@Data
 @Entity
 @Getter
 @Setter
@@ -101,7 +103,7 @@ public class Order {
 	@JsonProperty("cancellationReason")
 	private String cancellationReason;
 
-	@Column(name = "created_at", nullable = false, updatable = false)
+	@Column(name = "created_at")
 	@JsonProperty("createdAt")
 	private LocalDateTime createdAt;
 
